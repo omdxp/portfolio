@@ -1,10 +1,5 @@
 use crate::components::Nav;
-use crate::pages::AboutMePage;
-use crate::pages::ConsolePage;
-use crate::pages::LinksPage;
-use crate::pages::ProjectsPage;
-use crate::pages::SkillsPage;
-use crate::pages::WelcomePage;
+use crate::pages::{ConsolePage, LinksPage, ProjectsPage, SkillsPage, WelcomePage};
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
@@ -22,7 +17,6 @@ pub fn App(cx: Scope) -> impl IntoView {
             <main>
                 <Routes>
                     <Route path="/" view=|cx| view! { cx, <WelcomePage/> }/>
-                    <Route path="/about-me" view=|cx| view! {cx, <AboutMePage/>} />
                     <Route path="/skills" view=|cx| view! {cx, <SkillsPage/>} />
                     <Route path="/projects" view=|cx| view! {cx, <ProjectsPage/>} />
                     <Route path="/links" view=|cx| view! {cx, <LinksPage/>} />
